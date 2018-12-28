@@ -1,0 +1,31 @@
+<% include header.ejs %>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Edit the product details to change</h2>
+            <form style="margin: 20px 0 0 0" method="POST" action="/editProduct">
+                <input type="hidden" name="productId" id="productId" value="<%= product.id %>">
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input required type="text" class="form-control" id="productName" value="<%= product.name %>" name="productName" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="productDescription">Product Description</label>
+                    <textarea required class="form-control" id="productDescription" name="productDescription" placeholder="Description"><%= product.description %> </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Product Price</label>
+                    <input required type="text" class="form-control" id="productPrice" value="<%= product.price %>"  name="productPrice" placeholder="Price">
+                </div>
+                <div class="form-group">
+                    <label for="productLocation">Product Location</label>
+                    <input required type="text" class="form-control" id="productLocation" value="<%= product.location %>" name="productLocation" placeholder="Location">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg" id="productSubmit">Edit Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<% include footer.ejs %>

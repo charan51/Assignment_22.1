@@ -1,0 +1,34 @@
+<% include header.ejs %>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Enter the product details to add</h2>
+            <form style="margin: 20px 0 0 0" enctype="multipart/form-data"  method="POST" action="/addProduct">
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input required type="text" class="form-control" id="productName" name="productName" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="productDescription">Product Description</label>
+                    <textarea required class="form-control" id="productDescription" name="productDescription" placeholder="Description"> </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Product Price</label>
+                    <input required type="text" class="form-control" id="productPrice" name="productPrice" placeholder="Price">
+                </div>
+                <div class="form-group">
+                    <label for="productImage">Product Image</label>
+                    <input required type="file" class="form-control" id="productImage" name="productImage" />
+                </div>
+                <div class="form-group">
+                    <label for="productLocation">Product Location</label>
+                    <input required type="text" class="form-control" id="productLocation" name="productLocation" placeholder="Location">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg" id="productSubmit">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<% include footer.ejs %>
